@@ -3,103 +3,566 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Little Shop: Math Adventure | VAYVIAN TECHNOLOGIES</title>
+<title>Vayvian — Vaibhav's personal projects: apps, games and AI pipelines</title>
+<meta name="description" content="Vayvian is where Vaibhav builds personal projects: The Royale Lab YouTube channel run by an AI video pipeline, Yoga Companion, a safety-first yoga app, and Little Shop: Math Adventure, a kids' math game.">
+<meta name="keywords" content="Vayvian, Vaibhav, indie developer, personal projects, The Royale Lab, Clash Royale Shorts, AI video pipeline, Yoga Companion, yoga app, Little Shop Math Adventure, kids math game, Godot, FastAPI, Flutter">
+<meta name="author" content="Vaibhav">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b0d14">
+<link rel="canonical" href="https://vayvian.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff7a59'/%3E%3Cstop offset='1' stop-color='%23ffc24b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230b0d14'/%3E%3Cpath d='M14 18l18 30 18-30h-9l-9 16-9-16z' fill='url(%23g)'/%3E%3C/svg%3E">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vayvian">
+<meta property="og:title" content="Vayvian — Vaibhav's personal projects">
+<meta property="og:description" content="Apps, games and AI pipelines built for fun: The Royale Lab, Yoga Companion and Little Shop: Math Adventure.">
+<meta property="og:url" content="https://vayvian.com/">
+<meta property="og:image" content="https://vayvian.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vayvian — personal projects by Vaibhav">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vayvian — Vaibhav's personal projects">
+<meta name="twitter:description" content="Apps, games and AI pipelines built for fun: The Royale Lab, Yoga Companion and Little Shop: Math Adventure.">
+<meta name="twitter:image" content="https://vayvian.com/assets/og.png">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://vayvian.com/#website",
+      "url": "https://vayvian.com/",
+      "name": "Vayvian",
+      "description": "Personal projects by Vaibhav: apps, games and AI pipelines.",
+      "publisher": { "@id": "https://vayvian.com/#org" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://vayvian.com/#org",
+      "name": "VAYVIAN TECHNOLOGIES",
+      "alternateName": "Vayvian",
+      "url": "https://vayvian.com/",
+      "email": "contact@vayvian.com",
+      "founder": { "@id": "https://vayvian.com/#person" },
+      "contactPoint": [
+        { "@type": "ContactPoint", "contactType": "general", "email": "contact@vayvian.com" },
+        { "@type": "ContactPoint", "contactType": "customer support", "email": "support@yogacompanion.com", "description": "Yoga Companion support" }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://vayvian.com/#person",
+      "name": "Vaibhav",
+      "url": "https://vayvian.com/",
+      "email": "vaibhav.works1587@gmail.com",
+      "jobTitle": "Independent developer",
+      "sameAs": ["https://www.youtube.com/@TheRoyaleLab"],
+      "knowsAbout": ["Python", "FastAPI", "Flutter", "Godot", "Docker", "PostgreSQL", "Computer vision", "AI video pipelines"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://vayvian.com/#webpage",
+      "url": "https://vayvian.com/",
+      "name": "Vayvian — Vaibhav's personal projects",
+      "isPartOf": { "@id": "https://vayvian.com/#website" },
+      "about": { "@id": "https://vayvian.com/#person" },
+      "primaryImageOfPage": "https://vayvian.com/assets/og.png"
+    },
+    {
+      "@type": "ItemList",
+      "name": "Projects",
+      "itemListElement": [
+        {
+          "@type": "ListItem", "position": 1,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "The Royale Lab",
+            "url": "https://www.youtube.com/@TheRoyaleLab",
+            "sameAs": "https://vayvian.com/#royale-lab",
+            "description": "A Clash Royale YouTube Shorts channel produced by an AI-assisted video pipeline: highlight detection, hook-first editing, ranking and metadata generation, all automated.",
+            "creator": { "@id": "https://vayvian.com/#person" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Yoga Companion",
+            "url": "https://vayvian.com/#yoga-companion",
+            "applicationCategory": "HealthApplication",
+            "operatingSystem": "Android, Web",
+            "description": "A personalized, safety-first yoga assistant. A deterministic rule engine builds a daily plan from your goals and health conditions and explains every pose. English, Hindi and Marathi.",
+            "author": { "@id": "https://vayvian.com/#org" },
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Little Shop: Math Adventure",
+            "url": "https://vayvian.com/#little-shop",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "Android",
+            "description": "A cheerful shopkeeping game for children aged 6 to 10 that teaches counting, addition, money and change through play. No ads, no purchases, zero permissions.",
+            "author": { "@id": "https://vayvian.com/#org" },
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "image": "https://vayvian.com/assets/littleshop-icon.webp"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <style>
   :root {
-    --cream: #fff6e3; --card: #ffffff; --brown: #5a3e27;
-    --soft: #8a6d4f; --coral: #ef7d57; --green: #5abb6d; --line: #f0e4cd;
+    --bg: #0b0d14;
+    --bg-2: #10131d;
+    --card: rgba(255,255,255,.04);
+    --card-border: rgba(255,255,255,.08);
+    --text: #eef0f6;
+    --muted: #a3a9bb;
+    --coral: #ff7a59;
+    --amber: #ffc24b;
+    --mint: #5fd3a3;
+    --lilac: #b39cff;
+    --sky: #6cc4ff;
+    --grad: linear-gradient(120deg, var(--coral), var(--amber));
+    --radius: 22px;
+    --max: 1120px;
+    --ease: cubic-bezier(.22,.61,.36,1);
   }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
   body {
-    background: var(--cream); color: var(--brown);
-    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-    line-height: 1.65; padding: 24px 16px 64px;
+    background: var(--bg); color: var(--text);
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden;
   }
-  .wrap { max-width: 760px; margin: 0 auto; }
-  .awning {
-    height: 26px; border-radius: 0 0 14px 14px; margin-bottom: 28px;
-    background: repeating-linear-gradient(90deg,
-      var(--coral) 0 48px, #ffffff 48px 96px);
-    border: 2px solid #d96a48; border-top: none;
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  ::selection { background: var(--coral); color: #fff; }
+
+  .skip { position: absolute; left: -999px; top: 8px; background: var(--coral); color: #fff; padding: 8px 14px; border-radius: 8px; z-index: 100; }
+  .skip:focus { left: 8px; }
+
+  /* ---------- Backdrop ---------- */
+  .orbs { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+  .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: .45; will-change: transform; }
+  .orb.a { width: 520px; height: 520px; left: -140px; top: -120px; background: #ff7a59; animation: drift 26s var(--ease) infinite alternate; }
+  .orb.b { width: 460px; height: 460px; right: -160px; top: 20vh; background: #6a4cff; animation: drift 32s var(--ease) infinite alternate-reverse; }
+  .orb.c { width: 420px; height: 420px; left: 30vw; bottom: -200px; background: #1fb58f; animation: drift 38s var(--ease) infinite alternate; opacity: .3; }
+  @keyframes drift {
+    from { transform: translate3d(0,0,0) scale(1); }
+    to   { transform: translate3d(90px, 70px, 0) scale(1.15); }
   }
-  .card {
-    background: var(--card); border: 2px solid var(--line);
-    border-radius: 22px; padding: 32px 30px; margin-bottom: 20px;
+  .grain { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .06;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+  /* ---------- Nav ---------- */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    background: rgba(11,13,20,.6); border-bottom: 1px solid rgba(255,255,255,.06);
   }
-  h1 { font-size: 1.7rem; margin-bottom: 4px; }
-  .sub { color: var(--soft); margin-bottom: 4px; }
-  .date { color: var(--soft); font-size: .9rem; }
-  h2 { font-size: 1.15rem; margin: 26px 0 8px; color: var(--brown); }
-  p, li { color: #6b543d; }
-  ul { padding-left: 22px; margin: 8px 0; }
-  .headline {
-    background: #eef8ef; border: 2px solid var(--green); border-radius: 16px;
-    padding: 18px 20px; margin: 20px 0; font-size: 1.05rem; color: #2f6e3c;
+  .nav { max-width: var(--max); margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .3px; }
+  .brand svg { width: 30px; height: 30px; }
+  .nav ul { display: flex; gap: 6px; list-style: none; }
+  .nav li a { padding: 8px 12px; border-radius: 999px; font-size: .92rem; color: var(--muted); transition: color .2s, background .2s; }
+  .nav li a:hover, .nav li a:focus-visible { color: var(--text); background: rgba(255,255,255,.06); }
+  .nav .cta { background: var(--grad); color: #1a0f0a; font-weight: 600; padding: 9px 16px; border-radius: 999px; font-size: .92rem; transition: transform .2s, box-shadow .2s; }
+  .nav .cta:hover { transform: translateY(-1px); box-shadow: 0 10px 30px rgba(255,122,89,.35); }
+  @media (max-width: 720px) { .nav ul { display: none; } }
+
+  /* ---------- Layout helpers ---------- */
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  section { padding: 96px 0; position: relative; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .eyebrow::before { content: ""; width: 22px; height: 2px; background: var(--grad); border-radius: 2px; }
+  h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); line-height: 1.15; letter-spacing: -.02em; margin: 14px 0 12px; }
+  .lead { color: var(--muted); font-size: 1.1rem; max-width: 640px; }
+  .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal[data-delay="1"] { transition-delay: .12s; }
+  .reveal[data-delay="2"] { transition-delay: .24s; }
+  .reveal[data-delay="3"] { transition-delay: .36s; }
+
+  /* ---------- Hero ---------- */
+  .hero { min-height: calc(100vh - 62px); display: grid; place-items: center; padding: 60px 0 80px; text-align: center; }
+  .hero .pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--card-border); background: var(--card); font-size: .85rem; color: var(--muted); animation: fadeUp .9s var(--ease) both; }
+  .hero .pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 0 rgba(95,211,163,.6); animation: pulse 2.2s infinite; }
+  @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(95,211,163,0); } 100% { box-shadow: 0 0 0 0 rgba(95,211,163,0); } }
+  .hero h1 { font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.04; letter-spacing: -.035em; margin: 26px auto 20px; max-width: 900px; font-weight: 800; animation: fadeUp 1s .1s var(--ease) both; }
+  .hero h1 .word { display: inline-block; }
+  /* The name: shimmering gradient text with a sweeping underline. Kept out of the
+     word splitter — an animated child layer would break background-clip: text. */
+  .hero h1 .name {
+    position: relative; display: inline-block; padding: 0 .04em;
+    background: linear-gradient(90deg, #ff7a59 0%, #ffc24b 30%, #ff5fa2 55%, #ffc24b 80%, #ff7a59 100%);
+    background-size: 250% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: nameIn 1s .35s var(--ease) both, shimmer 7s 1.3s linear infinite;
   }
-  .footer { text-align: center; color: var(--soft); font-size: .85rem; margin-top: 28px; }
-  a { color: var(--coral); }
+  .hero h1 .name::after {
+    content: ""; position: absolute; left: .04em; right: .04em; bottom: -.08em; height: .1em; border-radius: 999px;
+    background: linear-gradient(90deg, #ff7a59, #ffc24b, #ff5fa2); opacity: .9;
+    transform: scaleX(0); transform-origin: left;
+    animation: underline .8s 1.05s var(--ease) forwards;
+  }
+  @keyframes nameIn { from { opacity: 0; transform: translateY(24px) rotate(-3deg) scale(.96); } to { opacity: 1; transform: none; } }
+  @keyframes shimmer { from { background-position: 0% 50%; } to { background-position: 250% 50%; } }
+  @keyframes underline { to { transform: scaleX(1); } }
+  .hero p { color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.25rem); max-width: 620px; margin: 0 auto 34px; animation: fadeUp 1s .22s var(--ease) both; }
+  .hero .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: fadeUp 1s .34s var(--ease) both; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-weight: 600; font-size: .98rem; transition: transform .2s var(--ease), box-shadow .2s, background .2s; }
+  .btn.primary { background: var(--grad); color: #1a0f0a; }
+  .btn.primary:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(255,122,89,.35); }
+  .btn.ghost { border: 1px solid var(--card-border); background: var(--card); color: var(--text); }
+  .btn.ghost:hover { background: rgba(255,255,255,.08); transform: translateY(-2px); }
+  .hero .scroll { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); color: var(--muted); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; animation: fadeUp 1s .8s var(--ease) both; }
+  .hero .scroll span { display: block; width: 1px; height: 36px; margin: 8px auto 0; background: linear-gradient(var(--muted), transparent); animation: scrollHint 1.8s infinite; }
+  @keyframes scrollHint { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+
+  /* ---------- Intro ---------- */
+  .intro-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 48px; align-items: center; }
+  .intro p + p { margin-top: 14px; }
+  .intro p { color: var(--muted); font-size: 1.05rem; }
+  .intro strong { color: var(--text); }
+  .stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .chip { padding: 6px 12px; border-radius: 999px; border: 1px solid var(--card-border); background: var(--card); font-size: .82rem; color: var(--muted); transition: border-color .2s, color .2s; }
+  .chip:hover { border-color: var(--coral); color: var(--text); }
+  .principles { display: grid; gap: 12px; }
+  .principle { display: flex; gap: 14px; padding: 16px 18px; border-radius: 16px; border: 1px solid var(--card-border); background: var(--card); transition: transform .3s var(--ease), border-color .3s; }
+  .principle:hover { transform: translateX(6px); border-color: rgba(255,255,255,.18); }
+  .principle .ic { flex: none; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; font-size: 1.15rem; background: rgba(255,255,255,.06); }
+  .principle b { display: block; font-size: .98rem; margin-bottom: 2px; }
+  .principle span { color: var(--muted); font-size: .9rem; }
+  @media (max-width: 860px) { .intro-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+  /* ---------- Projects ---------- */
+  .project { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 40px; border-radius: var(--radius); border: 1px solid var(--card-border); background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); margin-top: 40px; position: relative; overflow: hidden; transition: border-color .3s, transform .4s var(--ease); }
+  .project:hover { border-color: rgba(255,255,255,.16); transform: translateY(-3px); }
+  .project::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; background: linear-gradient(120deg, var(--accent, var(--coral)), transparent 45%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: .55; pointer-events: none; }
+  .project.flip .visual { order: -1; }
+  .project .tag { display: inline-flex; align-items: center; gap: 8px; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent, var(--coral)); font-weight: 700; }
+  .project h3 { font-size: clamp(1.6rem, 3vw, 2.1rem); letter-spacing: -.02em; margin: 10px 0 12px; line-height: 1.15; }
+  .project p { color: var(--muted); }
+  .project ul { list-style: none; margin: 18px 0 22px; display: grid; gap: 9px; }
+  .project li { position: relative; padding-left: 22px; color: var(--muted); font-size: .95rem; }
+  .project li::before { content: "✦"; position: absolute; left: 0; top: 0; color: var(--accent, var(--coral)); }
+  .project li code { font-family: ui-monospace, Consolas, monospace; font-size: .88em; padding: 1px 6px; border-radius: 6px; background: rgba(255,255,255,.07); color: var(--text); }
+  .project .links { display: flex; gap: 10px; flex-wrap: wrap; }
+  .project .links .btn { padding: 10px 16px; font-size: .9rem; }
+  .visual { position: relative; border-radius: 18px; overflow: hidden; min-height: 300px; display: grid; place-items: center; background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.08), transparent 60%), rgba(0,0,0,.25); }
+  @media (max-width: 860px) { .project { grid-template-columns: 1fr; padding: 26px; gap: 28px; } .project.flip .visual { order: 0; } .visual { min-height: 240px; } }
+
+  /* Royale Lab pipeline visual */
+  .pipe { width: 100%; height: auto; }
+  .pipe .flow { stroke-dasharray: 6 8; animation: dash 1.6s linear infinite; }
+  @keyframes dash { to { stroke-dashoffset: -28; } }
+  .pipe .node { animation: nodePulse 3s var(--ease) infinite; transform-origin: center; transform-box: fill-box; }
+  .pipe .node:nth-child(2) { animation-delay: .5s; }
+  .pipe .node:nth-child(3) { animation-delay: 1s; }
+  .pipe .node:nth-child(4) { animation-delay: 1.5s; }
+  @keyframes nodePulse { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+  .pipe .bar { animation: bar 2.4s var(--ease) infinite; transform-origin: left; }
+  @keyframes bar { 0% { transform: scaleX(.2); } 60% { transform: scaleX(1); } 100% { transform: scaleX(1); opacity: .4; } }
+
+  /* Yoga visual */
+  .yoga-visual img { width: min(300px, 80%); filter: drop-shadow(0 20px 40px rgba(0,0,0,.45)); animation: breathe 6s ease-in-out infinite; }
+  @keyframes breathe { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-8px) scale(1.02); } }
+  .yoga-visual .ring { position: absolute; border-radius: 50%; border: 1px solid rgba(179,156,255,.35); animation: ring 6s ease-in-out infinite; }
+  .yoga-visual .ring.r1 { width: 260px; height: 260px; }
+  .yoga-visual .ring.r2 { width: 340px; height: 340px; animation-delay: 1s; }
+  .yoga-visual .ring.r3 { width: 420px; height: 420px; animation-delay: 2s; }
+  @keyframes ring { 0%,100% { transform: scale(.94); opacity: .3; } 50% { transform: scale(1.02); opacity: .8; } }
+  .lang { position: absolute; bottom: 14px; left: 14px; right: 14px; display: flex; justify-content: center; gap: 8px; }
+  .lang span { padding: 4px 10px; border-radius: 999px; background: rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.12); font-size: .78rem; backdrop-filter: blur(6px); }
+
+  /* Little Shop visual */
+  .shop-visual { padding: 22px; }
+  .shop-visual .screen { border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,.12); box-shadow: 0 30px 60px rgba(0,0,0,.5); transform: perspective(900px) rotateY(-8deg) rotateX(3deg); transition: transform .6s var(--ease); }
+  .project:hover .shop-visual .screen { transform: perspective(900px) rotateY(0) rotateX(0); }
+  .shop-visual .icon { position: absolute; width: 84px; height: 84px; border-radius: 22px; right: 18px; bottom: 18px; box-shadow: 0 16px 34px rgba(0,0,0,.5); border: 2px solid rgba(255,255,255,.2); animation: bob 4s ease-in-out infinite; }
+  @keyframes bob { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-10px) rotate(3deg); } }
+  .coin { position: absolute; width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #ffe08a, #d99a1a); border: 2px solid #b47a0c; font-size: .8rem; font-weight: 800; color: #6a4600; display: grid; place-items: center; animation: coin 5s ease-in-out infinite; }
+  .coin.c1 { top: 18px; left: 20px; }
+  .coin.c2 { top: 40px; right: 40px; animation-delay: 1.3s; }
+  .coin.c3 { bottom: 40px; left: 36px; animation-delay: 2.6s; }
+  @keyframes coin { 0%,100% { transform: translateY(0) rotateY(0); } 50% { transform: translateY(-12px) rotateY(180deg); } }
+
+  /* ---------- Contact ---------- */
+  .contact-card { border-radius: var(--radius); border: 1px solid var(--card-border); padding: 48px 40px; background: linear-gradient(135deg, rgba(255,122,89,.12), rgba(179,156,255,.10)); position: relative; overflow: hidden; }
+  .contact-card::after { content: ""; position: absolute; width: 380px; height: 380px; right: -140px; top: -140px; border-radius: 50%; background: radial-gradient(circle, rgba(255,194,75,.35), transparent 65%); pointer-events: none; }
+  .emails { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 28px; position: relative; }
+  .email { display: block; padding: 18px 20px; border-radius: 16px; border: 1px solid var(--card-border); background: rgba(11,13,20,.5); transition: transform .3s var(--ease), border-color .3s; }
+  .email:hover { transform: translateY(-4px); border-color: var(--amber); }
+  .email small { display: block; color: var(--muted); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
+  .email b { font-weight: 600; word-break: break-all; }
+
+  footer { padding: 36px 0 44px; border-top: 1px solid rgba(255,255,255,.06); color: var(--muted); font-size: .88rem; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; align-items: center; }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--text); }
+
+  /* ---------- Reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="awning" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
 
-  <div class="card">
-    <h1>Privacy Policy</h1>
-    <p class="sub"><strong>Little Shop: Math Adventure</strong> (<code>com.vayvian.mathadventure</code>) — by VAYVIAN TECHNOLOGIES</p>
-    <p class="date">Effective date: 27 August 2026</p>
+<div class="orbs" aria-hidden="true"><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div></div>
+<div class="grain" aria-hidden="true"></div>
 
-    <div class="headline">
-      <strong>The short version: this app collects no data. None.</strong><br>
-      No personal information, no identifiers, no analytics, no ads, no accounts —
-      and it never connects to the internet.
+<header>
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="#top" aria-label="Vayvian home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a59"/><stop offset="1" stop-color="#ffc24b"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#161a26"/><path d="M14 18l18 30 18-30h-9l-9 16-9-16z" fill="url(#lg)"/></svg>
+      Vayvian
+    </a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#royale-lab">Royale Lab</a></li>
+      <li><a href="#yoga-companion">Yoga Companion</a></li>
+      <li><a href="#little-shop">Little Shop</a></li>
+    </ul>
+    <a class="cta" href="#contact">Get in touch</a>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <span class="pill"><span class="dot" aria-hidden="true"></span> Currently building three side projects</span>
+      <h1>Hi, I'm <span class="name">Vaibhav</span>.<br>I build apps, games and AI pipelines for fun.</h1>
+      <p>Vayvian is my personal workshop. Small, well-engineered projects that solve a real problem, shipped end to end, from idea to app store, GPU box or YouTube.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">See the projects</a>
+        <a class="btn ghost" href="#about">About me</a>
+      </div>
     </div>
+    <a class="scroll" href="#about" aria-hidden="true">Scroll<span></span></a>
+  </section>
 
-    <h2>1. Who we are</h2>
-    <p>Little Shop: Math Adventure is a children's educational game made by
-    VAYVIAN TECHNOLOGIES. It teaches mathematics (counting, addition, money and
-    change) to children aged 6–10 through shopkeeping play.</p>
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="wrap intro-grid">
+      <div class="intro reveal">
+        <span class="eyebrow">About</span>
+        <h2>A builder who likes to finish things.</h2>
+        <p>I'm a software developer who spends evenings and weekends turning ideas into working products. I care about the whole journey: <strong>a clean architecture</strong>, <strong>tests that actually run</strong>, a Docker setup that works from a fresh clone, and a store listing at the end.</p>
+        <p>Everything on this page is a personal project, built by me, with no team and no budget beyond a home GPU box. That constraint shapes the work: open-source first, offline where possible, and automation wherever a human would otherwise repeat themselves.</p>
+        <div class="stack" aria-label="Technologies I use">
+          <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">Flutter</span><span class="chip">Godot 4</span><span class="chip">Docker</span><span class="chip">FFmpeg</span><span class="chip">OpenCV</span><span class="chip">Local LLMs (Ollama)</span><span class="chip">Stable Diffusion + ControlNet</span><span class="chip">Caddy</span>
+        </div>
+      </div>
+      <div class="principles">
+        <div class="principle reveal" data-delay="1"><div class="ic">🧭</div><div><b>Deterministic where it matters</b><span>Rules and code for anything that must be correct. AI only for reasoning and taste.</span></div></div>
+        <div class="principle reveal" data-delay="2"><div class="ic">🔒</div><div><b>Privacy by default</b><span>Zero permissions when possible. No ads, no trackers, no dark patterns.</span></div></div>
+        <div class="principle reveal" data-delay="3"><div class="ic">🌏</div><div><b>Built for my languages</b><span>English, हिन्दी and मराठी ship together, not as an afterthought.</span></div></div>
+        <div class="principle reveal" data-delay="3"><div class="ic">🚢</div><div><b>Shipped, not just started</b><span>Every project has a test suite, a Docker file and a path to real users.</span></div></div>
+      </div>
+    </div>
+  </section>
 
-    <h2>2. Information we collect</h2>
-    <p><strong>We collect no information of any kind.</strong> The app requests
-    <strong>zero Android permissions</strong> — you can verify this on the app's
-    Play Store listing or in your device's app settings. It has no access to the
-    internet, contacts, location, camera, microphone, storage, or any device
-    identifier.</p>
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">Projects</span>
+        <h2>Three things I'm <span class="grad-text">building right now</span>.</h2>
+        <p class="lead">A YouTube channel run by a pipeline, a yoga app that puts safety first, and a math game for kids. Different domains, same approach.</p>
+      </div>
 
-    <h2>3. Data stored on the device</h2>
-    <p>Game progress (completed levels, stars, coins, decorations, and sound
-    settings) is saved <strong>only in the app's private storage on your
-    device</strong>. It never leaves the device, is not visible to other apps, and
-    is permanently deleted when the app is uninstalled. No backup of this data is
-    made to any server.</p>
+      <!-- Royale Lab -->
+      <article class="project reveal" id="royale-lab" style="--accent: var(--sky)">
+        <div>
+          <span class="tag">YouTube channel · AI video pipeline</span>
+          <h3>The Royale Lab</h3>
+          <p>A Clash Royale Shorts channel where the creator's job is reduced to two things: play the game and press upload. Everything in between is an automated pipeline I built in Python.</p>
+          <ul>
+            <li>Computer vision reads the game HUD to detect overtime, tower falls and match-deciding moments.</li>
+            <li>A ranking engine scores every replay on emotion, surprise, clarity, story and skill, and drops the boring ones.</li>
+            <li>Hook-first editing with FFmpeg: the climax leads, a targeted zoom aims at the falling tower, subtitles and thumbnail are generated.</li>
+            <li>A local LLM (Ollama) writes titles, descriptions and hashtags. It never touches a frame.</li>
+            <li>Fully offline, zero recurring cost, a few hundred automated tests keep it honest.</li>
+          </ul>
+          <div class="links">
+            <a class="btn primary" href="https://www.youtube.com/@TheRoyaleLab" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+          </div>
+        </div>
+        <div class="visual" aria-hidden="true">
+          <svg class="pipe" viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="pg" x1="0" x2="1"><stop offset="0" stop-color="#6cc4ff"/><stop offset="1" stop-color="#b39cff"/></linearGradient>
+            </defs>
+            <path class="flow" d="M70 70 C 140 70, 140 150, 210 150 S 280 230, 350 230" fill="none" stroke="url(#pg)" stroke-width="2.5" stroke-linecap="round"/>
+            <g class="node">
+              <rect x="20" y="40" width="100" height="60" rx="14" fill="#161a26" stroke="#6cc4ff" stroke-opacity=".6"/>
+              <text x="70" y="65" text-anchor="middle" fill="#eef0f6" font-size="12" font-weight="600">Raw gameplay</text>
+              <text x="70" y="84" text-anchor="middle" fill="#a3a9bb" font-size="10">Game1.mp4 …</text>
+            </g>
+            <g class="node">
+              <rect x="160" y="120" width="100" height="60" rx="14" fill="#161a26" stroke="#6cc4ff" stroke-opacity=".6"/>
+              <text x="210" y="145" text-anchor="middle" fill="#eef0f6" font-size="12" font-weight="600">Detect &amp; rank</text>
+              <text x="210" y="164" text-anchor="middle" fill="#a3a9bb" font-size="10">HUD · emotion gate</text>
+            </g>
+            <g class="node">
+              <rect x="300" y="200" width="100" height="60" rx="14" fill="#161a26" stroke="#b39cff" stroke-opacity=".7"/>
+              <text x="350" y="225" text-anchor="middle" fill="#eef0f6" font-size="12" font-weight="600">Short + meta</text>
+              <text x="350" y="244" text-anchor="middle" fill="#a3a9bb" font-size="10">edit · subs · title</text>
+            </g>
+            <g class="node">
+              <rect x="20" y="200" width="120" height="58" rx="14" fill="#161a26" stroke="#5fd3a3" stroke-opacity=".6"/>
+              <text x="34" y="220" fill="#a3a9bb" font-size="10">Replay score</text>
+              <rect x="34" y="228" width="92" height="8" rx="4" fill="rgba(255,255,255,.08)"/>
+              <rect class="bar" x="34" y="228" width="66" height="8" rx="4" fill="#5fd3a3"/>
+              <text x="34" y="252" fill="#5fd3a3" font-size="10" font-weight="700">66 / 100 · keep</text>
+            </g>
+          </svg>
+        </div>
+      </article>
 
-    <h2>4. Children's privacy</h2>
-    <p>The app is designed for children and is built to the strictest reading of
-    children's privacy laws (including COPPA and GDPR): since no data is collected
-    from anyone, no data is collected from children. There are no ads, no in-app
-    purchases, no social features, no chat, no links out of the app, and no content
-    a child can share or receive.</p>
+      <!-- Yoga Companion -->
+      <article class="project flip reveal" id="yoga-companion" style="--accent: var(--lilac)">
+        <div>
+          <span class="tag">Health app · Flutter + FastAPI</span>
+          <h3>Yoga Companion</h3>
+          <p>A personalized, safety-first yoga assistant. Instead of playing videos, it builds a daily plan from your goals, experience and health conditions, and tells you clearly which poses to avoid and why.</p>
+          <ul>
+            <li>A deterministic, explainable rule engine. Tell it about hypertension or back pain and unsafe poses are removed before the plan is built.</li>
+            <li>Every recommendation comes with a reason and step-by-step guidance. No black box.</li>
+            <li>The whole app, pose library and explanations in English, हिन्दी and मराठी.</li>
+            <li>Consistent pose illustrations rendered on my own GPU with Stable Diffusion, a LoRA per character and ControlNet skeletons.</li>
+            <li>Flutter front end, FastAPI + PostgreSQL back end, one <code>docker compose up</code> from a fresh clone.</li>
+          </ul>
+          <div class="links">
+            <a class="btn ghost" href="mailto:support@yogacompanion.com">support@yogacompanion.com</a>
+          </div>
+        </div>
+        <div class="visual yoga-visual" aria-hidden="true">
+          <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+          <img src="assets/yoga-character.webp" width="380" height="470" alt="" loading="lazy" decoding="async">
+          <div class="lang"><span>English</span><span>हिन्दी</span><span>मराठी</span></div>
+        </div>
+      </article>
 
-    <h2>5. Third parties</h2>
-    <p>The app contains no third-party advertising, analytics, or tracking SDKs,
-    and makes no network connections — so no data is shared with anyone, because
-    none exists to share.</p>
+      <!-- Little Shop -->
+      <article class="project reveal" id="little-shop" style="--accent: var(--amber)">
+        <div>
+          <span class="tag">Kids' game · Godot 4 · Android</span>
+          <h3>Little Shop: Math Adventure</h3>
+          <p>A cheerful shopkeeping game for children aged 6 to 10. Serve customers, add up prices, take payments and count out the change. Every sale earns coins to decorate your own little shop.</p>
+          <ul>
+            <li>30 hand-crafted levels from counting to 5 all the way to multiplication and giving change.</li>
+            <li>No fail states. Mistakes get a gentle retry from Biscuit the helper, never a buzzer.</li>
+            <li>No ads, no purchases, no accounts and <strong>zero Android permissions</strong>. Nothing ever leaves the phone.</li>
+            <li>Plays in English, हिन्दी and मराठी. Saves survive corrupt files and mid-write kills, with a disk-level test for every failure mode.</li>
+          </ul>
+          <div class="links">
+            <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.vayvian.mathadventure" target="_blank" rel="noopener">Google Play ↗</a>
+            <a class="btn ghost" href="privacy-policy.html">Privacy policy</a>
+          </div>
+        </div>
+        <div class="visual shop-visual" aria-hidden="true">
+          <div class="coin c1">₹</div><div class="coin c2">₹</div><div class="coin c3">₹</div>
+          <div class="screen"><img src="assets/littleshop-screen.webp" width="960" height="540" alt="" loading="lazy" decoding="async"></div>
+          <img class="icon" src="assets/littleshop-icon.webp" width="84" height="84" alt="" loading="lazy" decoding="async">
+        </div>
+      </article>
+    </div>
+  </section>
 
-    <h2>6. Changes to this policy</h2>
-    <p>If a future version of the app ever changes any of the above (for example,
-    an optional cloud backup), this policy will be updated before that version is
-    released, with the effective date above revised. The current version of this
-    policy always applies to the current version of the app.</p>
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-card reveal">
+        <span class="eyebrow">Contact</span>
+        <h2>Say hello.</h2>
+        <p class="lead">Feedback on a project, a bug report, or just want to talk shop? Pick the inbox that fits.</p>
+        <div class="emails">
+          <a class="email" href="mailto:vaibhav.works1587@gmail.com"><small>Personal</small><b>vaibhav.works1587@gmail.com</b></a>
+          <a class="email" href="mailto:contact@vayvian.com"><small>Vayvian · general</small><b>contact@vayvian.com</b></a>
+          <a class="email" href="mailto:support@yogacompanion.com"><small>Yoga Companion · support</small><b>support@yogacompanion.com</b></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <h2>7. Contact</h2>
-    <p>Questions about this policy or the app:<br>
-    <strong>VAYVIAN TECHNOLOGIES</strong><br>
-    Email: <a href="mailto:contact@vayvian.com">contact@vayvian.com</a><br>
-    Web: <a href="https://vayvian.com">vayvian.com</a></p>
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> VAYVIAN TECHNOLOGIES · Personal projects by Vaibhav</span>
+    <span><a href="privacy-policy.html">Privacy policy</a> · <a href="#top">Back to top</a></span>
   </div>
+</footer>
 
-  <p class="footer">© 2026 VAYVIAN TECHNOLOGIES · Play · Count · Grow!</p>
-</div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Split hero words for a subtle stagger
+  const h1 = document.querySelector('.hero h1');
+  if (h1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // Wrap each word in a span, walking text nodes only so inline markup
+    // (the gradient span, <br>) is preserved.
+    const wrapWords = (node) => {
+      Array.from(node.childNodes).forEach(child => {
+        if (child.nodeType === Node.ELEMENT_NODE) { if (!child.classList.contains('name')) wrapWords(child); return; }
+        if (child.nodeType !== Node.TEXT_NODE || !child.textContent.trim()) return;
+        const frag = document.createDocumentFragment();
+        child.textContent.split(/(\s+)/).forEach(t => {
+          if (!t) return;
+          if (!t.trim()) { frag.appendChild(document.createTextNode(t)); return; }
+          const s = document.createElement('span'); s.className = 'word'; s.textContent = t; frag.appendChild(s);
+        });
+        child.replaceWith(frag);
+      });
+    };
+    wrapWords(h1);
+    h1.querySelectorAll('.word').forEach((w, i) => {
+      w.style.animation = 'fadeUp .8s cubic-bezier(.22,.61,.36,1) both';
+      w.style.animationDelay = (0.08 + i * 0.05) + 's';
+    });
+  }
+
+  // Gentle parallax on the backdrop orbs
+  const orbs = document.querySelectorAll('.orb');
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return; ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        orbs.forEach((o, i) => { o.style.translate = '0 ' + (y * (0.05 + i * 0.03)) + 'px'; });
+        ticking = false;
+      });
+    }, { passive: true });
+  }
+</script>
 </body>
 </html>

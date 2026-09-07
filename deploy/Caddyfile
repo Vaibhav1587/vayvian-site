@@ -1,0 +1,33 @@
+# vayvian.com — Caddy terminates TLS with automatic Let's Encrypt.
+#
+# Certificate issuance requires, at the moment Caddy retries:
+#   - DNS: vayvian.com (and www) A-record -> the public IP
+#   - Public 443 forwarded to this host:8444 (TLS-ALPN-01 challenge)
+# Until both are live, Caddy retries issuance in the background (harmless log noise)
+# while plain HTTP keeps working for internal tests.
+
+{
+	email contact@vayvian.com
+}
+
+vayvian.com, www.vayvian.com {
+	root * /srv
+	file_server
+	encode zstd gzip
+
+	@static path /assets/*
+	header @static Cache-Control "public, max-age=31536000, immutable"
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+	}
+}
+
+# Internal/pre-DNS testing on plain HTTP (any other Host header, e.g. localhost).
+http://:80 {
+	root * /srv
+	file_server
+	encode zstd gzip
+}

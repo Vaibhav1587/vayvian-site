@@ -1,0 +1,34 @@
+# vayvian.com — Caddy with automatic HTTPS.
+#
+# Host port (only HTTPS is exposed; 80/443/8080/8443 are taken by other stacks):
+#   8444 -> container 443  (HTTPS + ACME TLS-ALPN-01 challenge)
+# Forward public 443 -> host:8444.
+# NOTE: with no port-80 mapping, certificate issuance relies solely on the
+# TLS-ALPN challenge over 443, and http:// visitors get no redirect.
+#
+# caddy_data persists issued certificates across restarts/rebuilds — keep it,
+# or reissuing on every restart will hit Let's Encrypt rate limits.
+# The volume names match the previous privacy-only stack so the existing
+# certificate is reused; stop that stack first (its container name is the same).
+# Explicit project name: the folder is called "deploy", which other stacks on this
+# host also use, and a shared project name makes --remove-orphans dangerous.
+name: vayvian-site
+
+services:
+  site:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    container_name: vayvian-privacy
+    restart: unless-stopped
+    ports:
+      - "8444:443"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+    name: privacy_caddy_data
+  caddy_config:
+    name: privacy_caddy_config
